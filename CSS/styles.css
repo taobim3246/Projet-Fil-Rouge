@@ -92,19 +92,28 @@ footer {
 }
 
 @media (max-width: 700px) {
-  div {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+    main > div:last-of-type {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
-  #catégories nav {
-    flex-wrap: wrap;
-  }
+    main > div:first-of-type nav {
+        flex-wrap: wrap;
+    }
 
-  header {
-    padding: 12px;
-  }
+    header {
+        padding: 12px;
+    }
 
-  main {
-    padding: 15px;
-  }
+    main {
+        padding: 15px;
+    }
+
+    main > section:first-of-type h1 {
+        font-size: 25px;
+    }
+}
+@media (max-width: 400px) {
+    main > div:last-of-type {
+        grid-template-columns: 1fr;
+    }
 }
